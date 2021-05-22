@@ -1,5 +1,5 @@
 import { selector } from "recoil";
-import { ALL } from "../interfaces";
+import { ALL } from "../../interfaces";
 import { animalFilterState, animalState } from "./atoms";
 
 export const filteredAnimalState = selector({

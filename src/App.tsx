@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './style/global';
 import { RecoilRoot } from 'recoil';
-import Picker from './components/Picker';
-import Animals from './components/Animals';
+import Header from './components/Header/Header';
+import AnimalPicker from './pages/AnimalPicker';
+import TodoListFilter from './pages/TodoList';
 
 function App() {
 	return (
@@ -10,10 +11,13 @@ function App() {
 			<GlobalStyle />
 			<RecoilRoot>
 			<BrowserRouter>
+			<Header />
 				<Switch>
 					<Route exact path='/' >
-						<Picker />
-						<Animals />
+						<AnimalPicker />
+					</Route>
+					<Route exact path='/todo' >
+						<TodoListFilter />
 					</Route>
 				</Switch>
 			</BrowserRouter>

@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSetRecoilState } from 'recoil';
-import { animalFilterState } from '../store/atoms';
-import { ALL, ANIMALS } from '../interfaces';
+import { animalFilterState } from '../../store/animalStore/atoms';
+import { ALL, ANIMALS } from '../../interfaces';
 
 const Picker: React.FC = () => {
     const setAnimalFilter = useSetRecoilState(animalFilterState);
     return (
         <Box>
-            <Button onClick={() => setAnimalFilter(ALL)} > 모든 동물 </Button>
-            <Button onClick={() => setAnimalFilter(ANIMALS.DOG)}> 강아지 </Button>
-            <Button onClick={() => setAnimalFilter(ANIMALS.CAT)}> 고양이 </Button>
-            <Button onClick={() => setAnimalFilter(ANIMALS.PENGUIN)}> 펭귄 </Button>
+            <Button onClick={() => setAnimalFilter(ALL)} > ALL </Button>
+            <Button onClick={() => setAnimalFilter(ANIMALS.DOG)}> DOG </Button>
+            <Button onClick={() => setAnimalFilter(ANIMALS.CAT)}> CAT </Button>
+            <Button onClick={() => setAnimalFilter(ANIMALS.PENGUIN)}> PENGUIN </Button>
+            <Button onClick={() => setAnimalFilter(ANIMALS.PANDA)}> PANDA </Button>
         </Box>
     );
 };
@@ -23,7 +24,7 @@ const Box = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 200px;
     margin-bottom: 10px;
 `;
 
@@ -31,16 +32,16 @@ const Button = styled.button`
     width: 100px;
     height: 60px;
     margin: 20px;
-    color: palevioletred;
-    border: 2px solid palevioletred;
-    border-radius: 3px;
+    color: #D81159;
+    border: 2px solid #D81159;
+    border-radius: 30px;
     font-size: 20px;
     text-align: center;
     transition: 0.4s ease;
     background-color: white;
     cursor: pointer;
     &:hover {
-        background-color: palevioletred;
+        background-color: #D81159;
         color: white;
     }
 `;

@@ -6,9 +6,13 @@ const GlobalStyle = createGlobalStyle`
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: black;
+        background-color: #218380;
         box-sizing: border-box;
-    }
+        ::placeholder {
+            color: #FFBC42;
+            opacity: 1;
+        };
+    };
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
@@ -16,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
         transition: background-color 5000s ease-in-out 0s;
         -webkit-transition: background-color 9999s ease-out;
         -webkit-text-fill-color: #fff !important;
-    }
+    };
 `;
 
 export default GlobalStyle;
